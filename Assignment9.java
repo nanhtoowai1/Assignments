@@ -9,7 +9,7 @@ class Frog{
 		this.slipdepth=slipdepth;
 		
 		trydepth=this.jumpdepth-this.slipdepth;
-		while(this.depth>0 && trydepth>0) {
+		while(this.depth>=jumpdepth && trydepth>0) {
 			this.depth-=trydepth;
 			count++;
 		}
@@ -24,7 +24,7 @@ class Frog{
 public class Assignment9 {
 	public static void main(String[] args) {
 		Frog frog=new Frog();
-		frog.jump(30,5,2);
+		frog.jump(10,2,1);
 		System.out.println("Frog jumps "+frog.totaljump()+" times");
 	}
 }
